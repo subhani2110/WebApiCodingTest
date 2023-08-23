@@ -32,17 +32,19 @@ function App() {
     <>
       <div className="card">
         <input
+          className='form-control mb-2'
           type="number"
           value={num1}
           onChange={(e) => setNumber1(parseInt(e.target.value, 10))}
         />
         <input
+          className='form-control mb-2'
           type="number"
           value={num2}
           onChange={(e) => setNumber2(parseInt(e.target.value, 10))}
         />
-        <button onClick={calculateSum}>Calculate Sum</button>
-        {sum !== null && <p>Sum: {sum}</p>}
+        <button className='btn btn-success' onClick={calculateSum}>Calculate Sum</button>
+        {sum !== null && <p className='p-2'><b>Sum: {sum}</b></p>}
       </div>
     </>
   );
